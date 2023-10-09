@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".Main_Activity">
+
+    <EditText
+        android:id="@+id/inputTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter temperature"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/unitSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputTemperature"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/celsiusRadioButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Celsius" />
+
+        <RadioButton
+            android:id="@+id/fahrenheitRadioButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit" />
+
+        <RadioButton
+            android:id="@+id/kelvinRadioButton"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:text="Kelvin" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@+id/unitSelection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:text=""
+        android:textSize="24sp" />
+</RelativeLayout>
